@@ -1,5 +1,4 @@
 # Cansat - Arapy
 Este repositorio contiene los archivos de diseño de placas electrónicas, modelos 3D, firmware y código fuente de la aplicación.
 
-http://github.com - automatic!
-[GitHub](http://github.com)
+[proyecto arapy](http://www.proyectoarapy.com.py/)
