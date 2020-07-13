@@ -1,0 +1,302 @@
+EESchema Schematic File Version 4
+LIBS:placa_potencia-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "PCB de la placa de distribución de potencia"
+Date "2020-01-09"
+Rev "Alejandro Espinoza"
+Comp "Arapy Tech"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L placa_potencia-rescue:reg3_3V U3
+U 1 1 5D4A3479
+P 4750 1600
+F 0 "U3" H 4750 1850 60  0000 C CNN
+F 1 "reg3_3V" H 4750 1350 60  0000 C CNN
+F 2 "huellas_cansat:AMS117_3_3V_MOD" H 4750 1600 60  0001 C CNN
+F 3 "" H 4750 1600 60  0001 C CNN
+	1    4750 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L placa_potencia-rescue:boost_5V U2
+U 1 1 5D4A371B
+P 3550 1600
+F 0 "U2" H 3550 1850 60  0000 C CNN
+F 1 "boost_5V" H 3550 1350 60  0000 C CNN
+F 2 "huellas_cansat:dc_dc_conv_xl60009" H 3550 1600 60  0001 C CNN
+F 3 "" H 3550 1600 60  0001 C CNN
+	1    3550 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L placa_potencia-rescue:Cargador_bateria U1
+U 1 1 5D4A3AB2
+P 2300 1600
+F 0 "U1" H 2100 1600 60  0000 C CNN
+F 1 "Cargador_bateria" H 2300 1250 60  0000 C CNN
+F 2 "huellas_cansat:batt_charg_TP4056_18650" H 2300 1600 60  0001 C CNN
+F 3 "" H 2300 1600 60  0001 C CNN
+	1    2300 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 1550 2900 1250
+Wire Wire Line
+	1650 1700 1650 2050
+Wire Wire Line
+	1650 2050 2900 2050
+Wire Wire Line
+	2900 2050 2900 1650
+Wire Wire Line
+	2800 1750 2800 2250
+Wire Wire Line
+	2800 1450 3000 1450
+Wire Wire Line
+	3000 1450 3000 1500
+Wire Wire Line
+	3000 1500 3100 1500
+Wire Wire Line
+	4000 1500 4250 1500
+Wire Wire Line
+	5800 1200 5800 1450
+Wire Wire Line
+	5800 1450 5900 1450
+NoConn ~ 5900 1250
+NoConn ~ 5900 1350
+Wire Wire Line
+	2900 1650 2800 1650
+$Comp
+L power:Earth #PWR01
+U 1 1 5D4A46BF
+P 2800 2250
+F 0 "#PWR01" H 2800 2000 50  0001 C CNN
+F 1 "Earth" H 2800 2100 50  0001 C CNN
+F 2 "" H 2800 2250 50  0001 C CNN
+F 3 "" H 2800 2250 50  0001 C CNN
+	1    2800 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR02
+U 1 1 5D4A46DD
+P 3100 1700
+F 0 "#PWR02" H 3100 1450 50  0001 C CNN
+F 1 "Earth" H 3100 1550 50  0001 C CNN
+F 2 "" H 3100 1700 50  0001 C CNN
+F 3 "" H 3100 1700 50  0001 C CNN
+	1    3100 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR03
+U 1 1 5D4A4708
+P 4000 1850
+F 0 "#PWR03" H 4000 1600 50  0001 C CNN
+F 1 "Earth" H 4000 1700 50  0001 C CNN
+F 2 "" H 4000 1850 50  0001 C CNN
+F 3 "" H 4000 1850 50  0001 C CNN
+	1    4000 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR04
+U 1 1 5D4A4722
+P 4250 1700
+F 0 "#PWR04" H 4250 1450 50  0001 C CNN
+F 1 "Earth" H 4250 1550 50  0001 C CNN
+F 2 "" H 4250 1700 50  0001 C CNN
+F 3 "" H 4250 1700 50  0001 C CNN
+	1    4250 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR05
+U 1 1 5D4A473C
+P 5250 1700
+F 0 "#PWR05" H 5250 1450 50  0001 C CNN
+F 1 "Earth" H 5250 1550 50  0001 C CNN
+F 2 "" H 5250 1700 50  0001 C CNN
+F 3 "" H 5250 1700 50  0001 C CNN
+	1    5250 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR06
+U 1 1 5D4A4756
+P 5900 1850
+F 0 "#PWR06" H 5900 1600 50  0001 C CNN
+F 1 "Earth" H 5900 1700 50  0001 C CNN
+F 2 "" H 5900 1850 50  0001 C CNN
+F 3 "" H 5900 1850 50  0001 C CNN
+	1    5900 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L placa_potencia-rescue:GND-RESCUE-placa_potencia #PWR07
+U 1 1 5D4A47A2
+P 1650 2050
+F 0 "#PWR07" H 1650 1800 50  0001 C CNN
+F 1 "GND" H 1650 1900 50  0000 C CNN
+F 2 "" H 1650 2050 50  0001 C CNN
+F 3 "" H 1650 2050 50  0001 C CNN
+	1    1650 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 1550 2900 1550
+$Comp
+L power:+BATT #PWR08
+U 1 1 5D4AE641
+P 1650 1300
+F 0 "#PWR08" H 1650 1150 50  0001 C CNN
+F 1 "+BATT" H 1650 1440 50  0000 C CNN
+F 2 "" H 1650 1300 50  0001 C CNN
+F 3 "" H 1650 1300 50  0001 C CNN
+	1    1650 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR09
+U 1 1 5D4AE9AC
+P 2900 1250
+F 0 "#PWR09" H 2900 1100 50  0001 C CNN
+F 1 "+BATT" H 2900 1390 50  0000 C CNN
+F 2 "" H 2900 1250 50  0001 C CNN
+F 3 "" H 2900 1250 50  0001 C CNN
+	1    2900 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 1850 4000 1700
+Wire Wire Line
+	5900 1850 5900 1750
+Wire Wire Line
+	1650 1600 1650 1300
+$Comp
+L power:+BATT #PWR010
+U 1 1 5D4AEB43
+P 5800 1200
+F 0 "#PWR010" H 5800 1050 50  0001 C CNN
+F 1 "+BATT" H 5800 1340 50  0000 C CNN
+F 2 "" H 5800 1200 50  0001 C CNN
+F 3 "" H 5800 1200 50  0001 C CNN
+	1    5800 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG011
+U 1 1 5D4AEBF1
+P 2100 750
+F 0 "#FLG011" H 2100 825 50  0001 C CNN
+F 1 "PWR_FLAG" H 2100 900 50  0000 C CNN
+F 2 "" H 2100 750 50  0001 C CNN
+F 3 "" H 2100 750 50  0001 C CNN
+	1    2100 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR012
+U 1 1 5D4AEC23
+P 2450 750
+F 0 "#PWR012" H 2450 600 50  0001 C CNN
+F 1 "+BATT" H 2450 890 50  0000 C CNN
+F 2 "" H 2450 750 50  0001 C CNN
+F 3 "" H 2450 750 50  0001 C CNN
+	1    2450 750 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 750  2450 750 
+$Comp
+L power:PWR_FLAG #FLG013
+U 1 1 5D4AEC63
+P 2100 1000
+F 0 "#FLG013" H 2100 1075 50  0001 C CNN
+F 1 "PWR_FLAG" H 2100 1150 50  0000 C CNN
+F 2 "" H 2100 1000 50  0001 C CNN
+F 3 "" H 2100 1000 50  0001 C CNN
+	1    2100 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L placa_potencia-rescue:GND-RESCUE-placa_potencia #PWR014
+U 1 1 5D4AEC7A
+P 2350 1000
+F 0 "#PWR014" H 2350 750 50  0001 C CNN
+F 1 "GND" H 2350 850 50  0000 C CNN
+F 2 "" H 2350 1000 50  0001 C CNN
+F 3 "" H 2350 1000 50  0001 C CNN
+	1    2350 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 1000 2100 1000
+$Comp
+L power:PWR_FLAG #FLG015
+U 1 1 5D4AECE1
+P 2800 800
+F 0 "#FLG015" H 2800 875 50  0001 C CNN
+F 1 "PWR_FLAG" H 2800 950 50  0000 C CNN
+F 2 "" H 2800 800 50  0001 C CNN
+F 3 "" H 2800 800 50  0001 C CNN
+	1    2800 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR016
+U 1 1 5D4AECF8
+P 3000 800
+F 0 "#PWR016" H 3000 550 50  0001 C CNN
+F 1 "Earth" H 3000 650 50  0001 C CNN
+F 2 "" H 3000 800 50  0001 C CNN
+F 3 "" H 3000 800 50  0001 C CNN
+	1    3000 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 800  3000 800 
+Text Label 5650 1750 2    60   ~ 0
+3.3V
+Wire Wire Line
+	5650 1650 5900 1650
+Text Label 5250 1500 0    60   ~ 0
+3.3V
+Text Label 4050 1500 0    60   ~ 0
+7V
+Text Label 5500 1550 0    60   ~ 0
+7V
+Wire Wire Line
+	5500 1550 5900 1550
+Wire Wire Line
+	5650 1750 5650 1650
+$Comp
+L placa_potencia-rescue:Conn_01x02_Male J2
+U 1 1 5D4B0B7D
+P 1450 1600
+F 0 "J2" H 1450 1700 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 1450 1400 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 1450 1600 50  0001 C CNN
+F 3 "" H 1450 1600 50  0001 C CNN
+	1    1450 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L placa_potencia-rescue:Conn_01x06_Male J1
+U 1 1 5D4B0C47
+P 6100 1550
+F 0 "J1" H 6100 1850 50  0000 C CNN
+F 1 "Conn_01x06_Male" H 6200 2100 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-06A_1x06_P2.54mm_Vertical" H 6100 1550 50  0001 C CNN
+F 3 "" H 6100 1550 50  0001 C CNN
+	1    6100 1550
+	-1   0    0    1   
+$EndComp
+$EndSCHEMATC

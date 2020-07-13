@@ -1,0 +1,6 @@
+(sym_lib_table
+  (lib (name flight_computer-rescue)(type Legacy)(uri ${KIPRJMOD}/flight_computer-rescue.lib)(options "")(descr ""))
+  (lib (name MCU_Module1)(type Legacy)(uri ${KIPRJMOD}/MCU_Module.lib)(options "")(descr ""))
+  (lib (name RF_GPS1)(type Legacy)(uri ${KIPRJMOD}/RF_GPS.lib)(options "")(descr ""))
+  (lib (name placa_potencia-rescue)(type Legacy)(uri "D:/Documentos/ingenieria-UNA/arapy/Cansat/Arapy Cansat V1.0/placa_potencia/placa_potencia-rescue.lib")(options "")(descr ""))
+)

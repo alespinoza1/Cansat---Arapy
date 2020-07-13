@@ -1,0 +1,7 @@
+(sym_lib_table
+  (lib (name MCU_Module1)(type Legacy)(uri "D:/Documentos/ingenieria-UNA/arapy/Cansat/Arapy Cansat V1.0/compu_de_vuelo/MCU_Module.lib")(options "")(descr ""))
+  (lib (name flight_computer-rescue)(type Legacy)(uri "D:/Documentos/ingenieria-UNA/arapy/Cansat/Arapy Cansat V1.0/compu_de_vuelo/flight_computer-rescue.lib")(options "")(descr ""))
+  (lib (name RF_GPS1)(type Legacy)(uri "D:/Documentos/ingenieria-UNA/arapy/Cansat/Arapy Cansat V1.0/compu_de_vuelo/RF_GPS.lib")(options "")(descr ""))
+  (lib (name placa_potencia-cache)(type Legacy)(uri "D:/Documentos/ingenieria-UNA/arapy/Cansat/Arapy Cansat V1.0/placa_potencia/placa_potencia-cache.lib")(options "")(descr ""))
+  (lib (name placa_sensores-rescue)(type Legacy)(uri ${KIPRJMOD}/placa_sensores-rescue.lib)(options "")(descr ""))
+)

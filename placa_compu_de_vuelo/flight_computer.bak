@@ -1,0 +1,479 @@
+EESchema Schematic File Version 4
+LIBS:flight_computer-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "PCB del controlador de vuelo"
+Date "2020-01-09"
+Rev "Alejandro Espinoza"
+Comp "Arapy Tech"
+Comment1 "versión 1"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module1:Arduino_Nano_v3.x A1
+U 1 1 5D4D7D21
+P 5000 3000
+F 0 "A1" H 4800 4025 50  0000 R CNN
+F 1 "Arduino_Nano_v3.x" H 4800 3950 50  0000 R CNN
+F 2 "Module:Arduino_Nano" H 5150 2050 50  0001 L CNN
+F 3 "" H 5000 2000 50  0001 C CNN
+	1    5000 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5D4D8BCD
+P 3750 1200
+F 0 "#FLG01" H 3750 1470 30  0001 C CNN
+F 1 "PWR_FLAG" H 3750 1430 30  0000 C CNN
+F 2 "" H 3750 1200 60  0001 C CNN
+F 3 "" H 3750 1200 60  0001 C CNN
+	1    3750 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR02
+U 1 1 5D4D8BFA
+P 4000 1200
+F 0 "#PWR02" H 4000 1300 30  0001 C CNN
+F 1 "VCC" H 4000 1300 30  0000 C CNN
+F 2 "" H 4000 1200 60  0001 C CNN
+F 3 "" H 4000 1200 60  0001 C CNN
+	1    4000 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG03
+U 1 1 5D4D8C1F
+P 4350 1200
+F 0 "#FLG03" H 4350 1470 30  0001 C CNN
+F 1 "PWR_FLAG" H 4350 1430 30  0000 C CNN
+F 2 "" H 4350 1200 60  0001 C CNN
+F 3 "" H 4350 1200 60  0001 C CNN
+	1    4350 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR04
+U 1 1 5D4D8C53
+P 4900 1800
+F 0 "#PWR04" H 4900 1900 30  0001 C CNN
+F 1 "VCC" H 4900 1900 30  0000 C CNN
+F 2 "" H 4900 1800 60  0001 C CNN
+F 3 "" H 4900 1800 60  0001 C CNN
+	1    4900 1800
+	1    0    0    -1  
+$EndComp
+Text Label 3800 1200 0    60   ~ 0
+7V
+$Comp
+L flight_computer-rescue:DGND #PWR2
+U 1 1 5D4D8CD2
+P 4500 1250
+F 0 "#PWR2" H 4500 1250 40  0001 C CNN
+F 1 "DGND" H 4500 1180 40  0000 C CNN
+F 2 "" H 4500 1250 60  0001 C CNN
+F 3 "" H 4500 1250 60  0001 C CNN
+	1    4500 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L flight_computer-rescue:DGND #PWR9
+U 1 1 5D4D8D55
+P 5050 4150
+F 0 "#PWR9" H 5050 4150 40  0001 C CNN
+F 1 "DGND" H 5050 4080 40  0000 C CNN
+F 2 "" H 5050 4150 60  0001 C CNN
+F 3 "" H 5050 4150 60  0001 C CNN
+	1    5050 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L flight_computer-rescue:CONN_6 P2
+U 1 1 5D4D8FB1
+P 7600 1850
+F 0 "P2" V 7550 1850 60  0000 C CNN
+F 1 "Conector Señales 1" H 7600 2250 60  0000 C CNN
+F 2 "Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical" H 7600 1850 60  0001 C CNN
+F 3 "" H 7600 1850 60  0001 C CNN
+	1    7600 1850
+	1    0    0    -1  
+$EndComp
+Text GLabel 4050 2650 0    47   Input ~ 0
+RX_GPS
+Text GLabel 4050 2800 0    47   Input ~ 0
+TX_GPS
+Text GLabel 6005 3505 2    43   Input ~ 0
+SCL
+Text GLabel 6005 3400 2    43   Input ~ 0
+SDA
+$Comp
+L Device:Buzzer BZ1
+U 1 1 5D4D92BC
+P 3850 3400
+F 0 "BZ1" H 4000 3450 50  0000 L CNN
+F 1 "Buzzer" H 4000 3350 50  0000 L CNN
+F 2 "Buzzer_Beeper:Buzzer_12x9.5RM7.6" V 3825 3500 50  0001 C CNN
+F 3 "" V 3825 3500 50  0001 C CNN
+	1    3850 3400
+	-1   0    0    1   
+$EndComp
+Text GLabel 4350 3700 0    43   Input ~ 0
+SCK
+Text GLabel 4350 3600 0    43   Input ~ 0
+MISO
+Text GLabel 4350 3500 0    43   Input ~ 0
+MOSI
+Text GLabel 4300 3400 0    43   Input ~ 0
+CS
+$Comp
+L RF_GPS1:NEO6M_GPS U1
+U 1 1 5D4D98CD
+P 6405 3805
+F 0 "U1" H 6705 3555 43  0000 C CNN
+F 1 "NEO6M_GPS" H 6705 3305 43  0000 C CNN
+F 2 "NEO_GPS:neo6m_gps" H 6405 3805 43  0001 C CNN
+F 3 "" H 6405 3805 43  0001 C CNN
+	1    6405 3805
+	1    0    0    -1  
+$EndComp
+$Comp
+L flight_computer-rescue:DGND #PWR8
+U 1 1 5D4D9960
+P 5905 3805
+F 0 "#PWR8" H 5905 3805 40  0001 C CNN
+F 1 "DGND" H 5905 3735 40  0000 C CNN
+F 2 "" H 5905 3805 60  0001 C CNN
+F 3 "" H 5905 3805 60  0001 C CNN
+	1    5905 3805
+	-1   0    0    1   
+$EndComp
+Text GLabel 6005 4105 0    47   Input ~ 0
+RX_GPS
+Text GLabel 6005 4205 0    47   Input ~ 0
+TX_GPS
+Text GLabel 5955 4355 0    43   Input ~ 0
+3.3V
+Wire Wire Line
+	4350 1200 4500 1200
+Wire Wire Line
+	4500 1200 4500 1250
+Wire Wire Line
+	3750 1200 4000 1200
+Wire Wire Line
+	4900 2000 4900 1800
+Wire Wire Line
+	5000 4000 5000 4050
+Wire Wire Line
+	3950 4050 5000 4050
+Wire Wire Line
+	5100 4050 5100 4000
+Wire Wire Line
+	5050 4150 5050 4050
+Connection ~ 5050 4050
+Wire Wire Line
+	4050 2800 4500 2800
+Wire Wire Line
+	4500 2700 4250 2700
+Wire Wire Line
+	4250 2700 4250 2650
+Wire Wire Line
+	4250 2650 4050 2650
+Wire Wire Line
+	4100 2500 4300 2500
+Wire Wire Line
+	4300 2500 4300 2600
+Wire Wire Line
+	4300 2600 4500 2600
+Wire Wire Line
+	4500 3300 3950 3300
+Wire Wire Line
+	3950 3500 3950 4050
+Connection ~ 5000 4050
+Wire Wire Line
+	4300 3400 4500 3400
+Wire Wire Line
+	4350 3500 4500 3500
+Wire Wire Line
+	4350 3600 4500 3600
+Wire Wire Line
+	4350 3700 4500 3700
+Wire Wire Line
+	5905 3805 5905 3855
+Wire Wire Line
+	5905 3855 6205 3855
+Wire Wire Line
+	6205 3855 6205 3905
+Wire Wire Line
+	6205 4355 6205 4205
+Wire Wire Line
+	6205 4355 5955 4355
+Wire Wire Line
+	6205 4105 6105 4105
+Wire Wire Line
+	6105 4105 6105 4205
+Wire Wire Line
+	6105 4205 6005 4205
+Wire Wire Line
+	6005 4105 6055 4105
+Wire Wire Line
+	6055 4105 6055 4005
+Wire Wire Line
+	6055 4005 6205 4005
+Text GLabel 7000 1600 0    43   Input ~ 0
+TEMP_SENS
+Text GLabel 6750 1700 0    43   Input ~ 0
+SCL
+Text GLabel 6750 1800 0    43   Input ~ 0
+SDA
+Text GLabel 6700 1900 0    43   Input ~ 0
+CS
+Text GLabel 6800 2000 0    43   Input ~ 0
+MOSI
+Text GLabel 6800 2100 0    43   Input ~ 0
+MISO
+Text GLabel 6700 2400 0    43   Input ~ 0
+SCK
+$Comp
+L flight_computer-rescue:CONN_6 P3
+U 1 1 5D4DA053
+P 7600 2650
+F 0 "P3" V 7550 2650 60  0000 C CNN
+F 1 "Conector Señales 2" H 7600 3050 60  0000 C CNN
+F 2 "Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical" H 7600 2650 60  0001 C CNN
+F 3 "" H 7600 2650 60  0001 C CNN
+	1    7600 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 1600 7000 1600
+Wire Wire Line
+	6750 1700 7250 1700
+Wire Wire Line
+	6750 1800 7250 1800
+Wire Wire Line
+	6700 1900 7250 1900
+Wire Wire Line
+	6800 2000 7250 2000
+Wire Wire Line
+	6800 2100 7250 2100
+Wire Wire Line
+	6700 2400 7250 2400
+Text GLabel 6900 2500 0    43   Input ~ 0
+INT_GIROSC
+$Comp
+L flight_computer-rescue:DGND #PWR5
+U 1 1 5D4DB02C
+P 3050 2050
+F 0 "#PWR5" H 3050 2050 40  0001 C CNN
+F 1 "DGND" H 3050 1980 40  0000 C CNN
+F 2 "" H 3050 2050 60  0001 C CNN
+F 3 "" H 3050 2050 60  0001 C CNN
+	1    3050 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 2000 3050 2000
+Wire Wire Line
+	3050 2000 3050 2050
+Text GLabel 2900 1900 2    43   Input ~ 0
+3.3V
+Text GLabel 2900 1700 2    43   Input ~ 0
+BATT
+$Comp
+L power:VCC #PWR05
+U 1 1 5D4DB190
+P 3300 1800
+F 0 "#PWR05" H 3300 1900 30  0001 C CNN
+F 1 "VCC" H 3300 1900 30  0000 C CNN
+F 2 "" H 3300 1800 60  0001 C CNN
+F 3 "" H 3300 1800 60  0001 C CNN
+	1    3300 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 1900 2900 1900
+Wire Wire Line
+	2700 1800 3300 1800
+Wire Wire Line
+	2700 1700 2900 1700
+Text GLabel 7125 3450 0    43   Input ~ 0
+3.3V
+Text GLabel 7065 3350 0    43   Input ~ 0
+5V
+Text GLabel 5200 1850 1    43   Input ~ 0
+5V
+Wire Wire Line
+	7250 2900 6855 2900
+Wire Wire Line
+	7250 2800 6890 2800
+Wire Wire Line
+	7250 2700 6830 2700
+Wire Wire Line
+	5200 2000 5200 1850
+NoConn ~ 5500 3300
+NoConn ~ 5500 3200
+$Comp
+L flight_computer-rescue:DGND #PWR6
+U 1 1 5D4DB683
+P 5700 2815
+F 0 "#PWR6" H 5700 2815 40  0001 C CNN
+F 1 "DGND" H 5700 2745 40  0000 C CNN
+F 2 "" H 5700 2815 60  0001 C CNN
+F 3 "" H 5700 2815 60  0001 C CNN
+	1    5700 2815
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5500 2500
+NoConn ~ 5500 2400
+NoConn ~ 5100 2000
+NoConn ~ 4500 2500
+NoConn ~ 4500 2400
+Wire Wire Line
+	7250 2500 6900 2500
+NoConn ~ 5500 3600
+NoConn ~ 5500 3700
+Text GLabel 4100 2500 0    43   Input ~ 0
+INT_GIROSC
+Text GLabel 4155 3200 0    43   Input ~ 0
+TEMP_SENS
+Wire Wire Line
+	5050 4050 5100 4050
+Wire Wire Line
+	5000 4050 5050 4050
+Text GLabel 5595 3100 2    50   Input ~ 0
+Dig1
+Text GLabel 6860 2600 0    50   Input ~ 0
+Dig1
+Wire Wire Line
+	7250 2600 6860 2600
+Wire Wire Line
+	5595 3100 5500 3100
+Wire Wire Line
+	5500 3095 5500 3100
+Wire Wire Line
+	4155 3200 4500 3200
+Text GLabel 3875 2905 0    43   Input ~ 0
+PWM
+Wire Wire Line
+	3875 2905 4500 2905
+Wire Wire Line
+	4500 2905 4500 2900
+Text GLabel 4065 3005 0    43   Input ~ 0
+TRANS
+Text GLabel 4030 3095 0    43   Input ~ 0
+RESC
+Wire Wire Line
+	4065 3005 4500 3005
+Wire Wire Line
+	4500 3005 4500 3000
+Wire Wire Line
+	4030 3095 4500 3095
+Wire Wire Line
+	4500 3095 4500 3100
+Wire Wire Line
+	6005 3400 5500 3400
+Wire Wire Line
+	5500 3500 6005 3500
+Wire Wire Line
+	6005 3500 6005 3505
+$Comp
+L flight_computer-rescue:DGND #PWR1
+U 1 1 5DABEF33
+P 6950 3580
+F 0 "#PWR1" H 6950 3580 40  0001 C CNN
+F 1 "DGND" H 6950 3510 40  0000 C CNN
+F 2 "" H 6950 3580 60  0001 C CNN
+F 3 "" H 6950 3580 60  0001 C CNN
+	1    6950 3580
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 3550 6950 3580
+Text GLabel 6830 2700 0    43   Input ~ 0
+PWM
+Text GLabel 6890 2800 0    43   Input ~ 0
+TRANS
+Text GLabel 6855 2900 0    43   Input ~ 0
+RESC
+Wire Wire Line
+	6950 3550 7250 3550
+Wire Wire Line
+	7125 3450 7250 3450
+Wire Wire Line
+	7065 3350 7250 3350
+$Comp
+L Connector_Generic:Conn_01x03 J1
+U 1 1 5DADEBB6
+P 7450 3450
+F 0 "J1" H 7530 3492 50  0000 L CNN
+F 1 "power out" H 7530 3401 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical" H 7450 3450 50  0001 C CNN
+F 3 "~" H 7450 3450 50  0001 C CNN
+	1    7450 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 2800 5700 2800
+Wire Wire Line
+	5700 2800 5700 2815
+$Comp
+L Device:R R1
+U 1 1 5DABAF9B
+P 6300 2840
+F 0 "R1" H 6370 2886 50  0000 L CNN
+F 1 "4.7K" H 6370 2795 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6230 2840 50  0001 C CNN
+F 3 "~" H 6300 2840 50  0001 C CNN
+	1    6300 2840
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5DABBB81
+P 6300 3165
+F 0 "R2" H 6370 3211 50  0000 L CNN
+F 1 "4.7K" H 6370 3120 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6230 3165 50  0001 C CNN
+F 3 "~" H 6300 3165 50  0001 C CNN
+	1    6300 3165
+	1    0    0    -1  
+$EndComp
+$Comp
+L flight_computer-rescue:DGND #PWR3
+U 1 1 5DABC310
+P 6300 3315
+F 0 "#PWR3" H 6300 3315 40  0001 C CNN
+F 1 "DGND" H 6300 3245 40  0000 C CNN
+F 2 "" H 6300 3315 60  0001 C CNN
+F 3 "" H 6300 3315 60  0001 C CNN
+	1    6300 3315
+	1    0    0    -1  
+$EndComp
+Text GLabel 6300 2690 1    43   Input ~ 0
+BATT
+$Comp
+L Connector_Generic:Conn_01x04 J2
+U 1 1 5DACD70E
+P 2500 1900
+F 0 "J2" H 2418 1475 50  0000 C CNN
+F 1 "power in" H 2418 1566 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 2500 1900 50  0001 C CNN
+F 3 "~" H 2500 1900 50  0001 C CNN
+	1    2500 1900
+	-1   0    0    1   
+$EndComp
+Connection ~ 5500 3100
+Wire Wire Line
+	6300 3015 6300 3000
+Wire Wire Line
+	6300 3000 5500 3000
+Connection ~ 6300 3000
+Wire Wire Line
+	6300 3000 6300 2990
+$EndSCHEMATC

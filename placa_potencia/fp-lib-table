@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name huellas_cansat)(type KiCad)(uri "$(KIPRJMOD)/huellas_cansat.pretty")(options "")(descr ""))
+  (lib (name Connector)(type KiCad)(uri "C:/Program Files/KiCad/share/kicad/kicad-footprints-master/Connector.pretty")(options "")(descr ""))
+)
